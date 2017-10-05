@@ -1,0 +1,19 @@
+@import url(https://fontlibrary.org/face/hk-grotesk);
+
+body {
+	font-family: 'HKGroteskRegular';
+}
+
+h1, h2, h3 {
+     font-family: 'HKGroteskBold';
+     font-weight: normal;
+     text-align: left;
+}
+
+.line-separator{
+     height:1px;
+     background:#717171;
+     border-bottom:1px solid #313030;
+ }
+      
+.remark-code, .remark-inline-code { font-family: 'HKGroteskRegular'; }
