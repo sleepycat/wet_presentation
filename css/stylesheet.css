@@ -1,34 +1,92 @@
 @import url(https://fontlibrary.org/face/hk-grotesk);
 
-.logo {
-	float: left;
-   padding-left: 4em;
-   padding-right: 2em;
-   height: 6em;
-   
-}
+/* START OF IMAGES */
+
 
 .logo img {
-  width: 6em;
+   position: absolute;
+   width: 6em;
+   top: 13em;
+   left: 10em;
+   height: 6em;
+   z-index: 2;
 }
 
-.separator {
-	float: left;
-	padding-right: 2em;
+.titleBG img {
+   height: 100%;
+   position: absolute;
+   z-index: 1;
 }
 
 .separator img {
-  width: 0.57em;
+   position: absolute;
+   top: 13em;
+   left: 18em;
+   width: 0.6em;
+   height: 6em;
+   z-index: 2;
+}
+
+
+.horizontalBar img {
+   position: absolute;
+   top: 31em;
+   height: 10em;
+   width: 100%;
+   z-index: 3;
+}
+
+
+/* END OF IMAGES */
+
+
+.noBold{
+   font-family: 'HKGroteskRegular';
 }
 
 body {
-	font-family: 'HKGroteskRegular';
+   font-family: 'HKGroteskRegular';
+}
+
+.title{
+   position: absolute;
+   font-family: 'HKGroteskBold';
+   font-size: 50px;
+   top: 5.25em;
+   left: 8em;
+   z-index: 2;
 }
 
 h1, h2, h3 {
-     font-family: 'HKGroteskBold';
-     font-weight: normal;
+   font-family: 'HKGroteskBold';
+   font-weight: normal;
+   z-index: 2;
 }
 
+p {
+   margin: 0px;
+}
+
+.remark-slide-scaler {
+   -webkit-box-shadow: none;
+   -moz-box-shadow: none;
+   box-shadow: none;
+
+}
+
+.remark-slide{
+
+}
+
+.remark-slide-content{
+	padding: 0em;
+	width: 60em;
+}
+
+.remark-container {
+   /*background-color: #FFCD33;*/
+}
       
-.remark-code, .remark-inline-code { font-family: 'HKGroteskRegular'; }
+.remark-code, .remark-inline-code { 
+   font-family: 'HKGroteskRegular';
+}
