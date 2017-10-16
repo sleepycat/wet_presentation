@@ -7,8 +7,16 @@
    position: absolute;
    width: 6em;
    top: 13em;
-   left: 10em;
+   left: 14.5em;
    height: 6em;
+   z-index: 2;
+}
+
+.headerRight img {
+   position: absolute;
+   left: 52em;
+   top: 1em;
+   height:4em;
    z-index: 2;
 }
 
@@ -21,7 +29,7 @@
 .separator img {
    position: absolute;
    top: 13em;
-   left: 18em;
+   left: 22.5em;
    width: 0.6em;
    height: 6em;
    z-index: 2;
@@ -30,8 +38,8 @@
 
 .horizontalBar img {
    position: absolute;
-   top: 31em;
-   height: 10em;
+   top: 31.1em;
+   height: 9em;
    width: 100%;
    z-index: 3;
 }
@@ -53,7 +61,7 @@ body {
    font-family: 'HKGroteskBold';
    font-size: 50px;
    top: 5.25em;
-   left: 8em;
+   left: 10em;
    z-index: 2;
 }
 
@@ -67,6 +75,7 @@ p {
    margin: 0px;
 }
 
+
 .remark-slide-scaler {
    -webkit-box-shadow: none;
    -moz-box-shadow: none;
@@ -74,17 +83,18 @@ p {
 
 }
 
-.remark-slide{
-
+.remark-slide-number{
+   position: absolute;
+   padding-right: 0.2em;
+   z-index: 3;
 }
 
 .remark-slide-content{
 	padding: 0em;
-	width: 60em;
 }
 
 .remark-container {
-   /*background-color: #FFCD33;*/
+   background-color: #e6e6e6;
 }
       
 .remark-code, .remark-inline-code { 

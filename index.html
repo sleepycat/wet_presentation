@@ -8,29 +8,35 @@
   </head>
   <body>
     <textarea id="source">
-<!-- .titleBG[![Title Background](images/BG_test.png)] -->
+.titleBG[![Title Background](images/BG_test.png)]
 
 .logo[![CDS logo](images/cds_logo.png)]
 .separator[![Yellow separator](images/bar.png)]
 
-.title[CDS Presentation <br> Template]
+.title[ CDS Presentation <br> .noBold[Template] ]
 
-.horizontalBar[![Footer](images/horizontalBar.png)]
+.horizontalBar[![Footer](images/HorizontalBar.png)]
 
 ---
 
-# Agenda
-
+.headerRight[![Header Right Aligned](images/header_right.png)]
+.horizontalBar[![Footer](images/HorizontalBar.png)]
 
 ---
 
 # Introduction
 
+.horizontalBar[![Footer](images/HorizontalBar.png)]
+
+---
+
+.horizontalBar[![Footer](images/HorizontalBar.png)]
+
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">
     </script>
     <script>
-      var slideshow = remark.create();
+      var slideshow = remark.create({ratio: "16:9"});
     </script>
   </body>
 </html>
