@@ -1,30 +1,99 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Title</title>
+    <title> CDS - Presentation Title </title>
     <meta charset="utf-8">
     <link rel= "stylesheet" href= "css/stylesheet.css" />
    
   </head>
   <body>
     <textarea id="source">
-.titleBG[![Title Background](images/BG_test.png)]
+.background[![Title Background](images/BG_test.png)]
 
 .logo[![CDS logo](images/cds_logo.png)]
+
 .separator[![Yellow separator](images/bar.png)]
 
-.title[ CDS Presentation <br> .noBold[Template] ]
+.title[ CDS Pres. Template <br> .noBold[ Title goes here ] ]
 
 .horizontalBar[![Footer](images/HorizontalBar.png)]
 
 ---
 
 .headerRight[![Header Right Aligned](images/header_right.png)]
+
 .horizontalBar[![Footer](images/HorizontalBar.png)]
+
+.yellowCircleRight[![Yellow Circle](images/circle.png)]
+
+.iconRight[![Left Icon](images/rightIcon.svg)]
+
+.verticalBarRight[![Vertical Bar Right](images/Bar.png)]
+
+.rightText[.noBold[This is an example of a]<br>  right aligned content slide.<br> .noBold[Use as few words as possible.]]
 
 ---
 
-# Introduction
+.headerLeft[![Header Left Aligned](images/header_left.png)]
+
+.horizontalBar[![Footer](images/HorizontalBar.png)]
+
+.yellowCircleLeft[![Yellow Circle](images/circle.png)]
+
+.iconLeft[![Left Icon](images/leftIcon.svg)]
+
+.verticalBarLeft[![Vertical Bar Left](images/Bar.png)]
+
+.leftText[.noBold[This is an example of a]<br>  left aligned content slide.<br> .noBold[Use as few words as possible.]]
+
+---
+
+.headerRight[![Header Right Aligned](images/header_right.png)]
+
+.horizontalBar[![Footer](images/HorizontalBar.png)]
+
+.verticalBarRight[![Vertical Bar Right](images/Bar.png)]
+
+.rightTextOnly[.noBold[This is an example of a] right aligned content slide. .noBold[We understand some people may have much more to say on a] single slide and require more space. .noBold[This is an example of a] text-only slide.]
+
+---
+
+.headerLeft[![Header Left Aligned](images/header_left.png)]
+
+.horizontalBar[![Footer](images/HorizontalBar.png)]
+
+.verticalBarLeft[![Vertical Bar Left](images/Bar.png)]
+
+.leftTextOnly[.noBold[This is an example of a] right aligned content slide. .noBold[We understand some people may have much more to say on a] single slide and require more space. .noBold[This is an example of a] text-only slide.]
+
+---
+.background[![Code Background](images/BG_code.png)]
+.code[
+
+```sh
+resource "aws_security_group" "elb" {
+  name        = "terraform_example_elb"
+  description = "Used in the terraform"
+  vpc_id      = "${aws_vpc.default.id}"
+
+  # HTTP access from anywhere
+  ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  # outbound internet access
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
+```
+]
 
 .horizontalBar[![Footer](images/HorizontalBar.png)]
 
