@@ -14,13 +14,17 @@
 
 .separator[![Yellow separator](images/bar.png)]
 
-.title[ CDS Pres. Template <br> .noBold[ Title goes here ] ]
+.title[ .bold[CDS Pres. Template] <br> Title goes here]
 
 .horizontalBar[![Footer](images/HorizontalBar.png)]
 
 ---
 
-.headerRight[![Header Right Aligned](images/header_right.png)]
+.twitterPost[![CDS Launch Post](images/cds_launch.png)]
+
+.horizontalBar[![Footer](images/HorizontalBar.png)]
+
+---
 
 .horizontalBar[![Footer](images/HorizontalBar.png)]
 
@@ -30,11 +34,9 @@
 
 .verticalBarRight[![Vertical Bar Right](images/Bar.png)]
 
-.rightText[.noBold[This is an example of a]<br>  right aligned content slide.<br> .noBold[Use as few words as possible.]]
+.rightText[This is an example of a<br>  .bold[right aligned content slide.]<br> Use as few words as possible.]
 
 ---
-
-.headerLeft[![Header Left Aligned](images/header_left.png)]
 
 .horizontalBar[![Footer](images/HorizontalBar.png)]
 
@@ -44,30 +46,51 @@
 
 .verticalBarLeft[![Vertical Bar Left](images/Bar.png)]
 
-.leftText[.noBold[This is an example of a]<br>  left aligned content slide.<br> .noBold[Use as few words as possible.]]
+.leftText[This is an example of a<br>  .bold[left aligned content slide.] <br> Use as few words as possible.]
 
 ---
-
-.headerRight[![Header Right Aligned](images/header_right.png)]
 
 .horizontalBar[![Footer](images/HorizontalBar.png)]
 
 .verticalBarRight[![Vertical Bar Right](images/Bar.png)]
 
-.rightTextOnly[.noBold[This is an example of a] right aligned content slide. .noBold[We understand some people may have much more to say on a] single slide and require more space. .noBold[This is an example of a] text-only slide.]
+.rightTextOnly[This is an example of a .bold[right aligned content slide.] We understand .bold[some people may have much more to say] on a single slide and require more space. This is an example of a .bold[text-only slide.]]
 
 ---
-
-.headerLeft[![Header Left Aligned](images/header_left.png)]
 
 .horizontalBar[![Footer](images/HorizontalBar.png)]
 
 .verticalBarLeft[![Vertical Bar Left](images/Bar.png)]
 
-.leftTextOnly[.noBold[This is an example of a] right aligned content slide. .noBold[We understand some people may have much more to say on a] single slide and require more space. .noBold[This is an example of a] text-only slide.]
+.leftTextOnly[This is an example of .bold[a right aligned content slide.] We understand .bold[some people may have much more to say] on a single slide and require more space. This is an example of a .bold[text-only slide.]]
 
 ---
+
+.horizontalBar[![Footer](images/HorizontalBar.png)]
+
+.verticalBarLeftCode[![Vertical Bar Left](images/Bar.png)]
+
+.codingTitle[.bold[Coding Example] <br> .noBold[Infrastructure as Code: Terraform]]
+
+---
+
 .background[![Code Background](images/BG_code.png)]
+
+.CenteredCode[
+
+```sh
+export AWS_REGION=eu-west-1
+moby build -output raw examples/aws.yml
+linuxkit push aws -bucket bucketname aws.raw
+```
+]
+
+.horizontalBar[![Footer](images/HorizontalBar.png)]
+
+---
+
+.background[![Code Background](images/BG_code.png)]
+
 .code[
 
 ```sh
@@ -93,11 +116,77 @@ resource "aws_security_group" "elb" {
   }
 }
 ```
+
 ]
 
 .horizontalBar[![Footer](images/HorizontalBar.png)]
 
 ---
+
+.background[![Code Background](images/BG_code.png)]
+
+.code[
+
+```sh
+resource "aws_instance" "web" {
+  connection {
+    # The default username for our AMI
+    user = "ubuntu"
+    # The connection will use the local SSH agent for authentication.
+  }
+  instance_type = "m1.small"
+  ami = "${lookup(var.aws_amis, var.aws_region)}"
+
+  # The name of our SSH keypair we created above.
+  key_name = "${aws_key_pair.auth.id}"
+
+  # Our Security group to allow HTTP and SSH access
+  vpc_security_group_ids = ["${aws_security_group.default.id}"]
+
+  # We're going to launch into the same subnet as our ELB. In a production
+  # environment it's more common to have a separate private subnet for
+  # backend instances.
+  subnet_id = "${aws_subnet.default.id}"
+
+  # We run a remote provisioner on the instance after creating it.
+  provisioner "remote-exec" {
+    inline = [
+      "sudo apt-get -y update",
+      "sudo apt-get -y install nginx",
+      "sudo service nginx start",
+    ]
+  }
+
+```
+]
+
+.horizontalBar[![Footer](images/HorizontalBar.png)]
+
+---
+
+.background[![Code Background](images/BG_code.png)]
+
+.code[
+
+```sh
+[mike@longshot two-tier]$ terraform apply
+aws_key_pair.auth: Creation complete (ID: default)
+aws_vpc.default: Creation complete (ID: vpc-db05a9bd)
+aws_internet_gateway.default: Creation complete (ID: igw-bc6dffdb)
+aws_subnet.default: Creation complete (ID: subnet-9076e3cb)
+aws_route.internet_access: Creation complete (ID: r-rtb-30f0c8561080289494)
+aws_security_group.default: Creation complete (ID: sg-2e610954)
+aws_security_group.elb: Creation complete (ID: sg-44660e3e)
+aws_instance.web: Creation complete (ID: i-00a6cb09321849fa3)
+aws_elb.web: Creation complete (ID: terraform-example-elb)
+
+Apply complete! Resources: 9 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+address = terraform-example-elb-839046221.us-west-2.elb.amazonaws.com
+```
+]
 
 .horizontalBar[![Footer](images/HorizontalBar.png)]
 
