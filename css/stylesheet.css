@@ -4,6 +4,52 @@ ul {
   list-style-type: none;
 }
 
+.insta{
+   position: absolute;
+   top:23em;
+   left: 12.8em;
+   text-align: center;
+   font-family: 'HKGroteskBold';
+}
+
+.twitter{
+   position: absolute;
+   top:23em;
+   left: 41em;
+   text-align: center;
+   font-family: 'HKGroteskBold';
+}
+
+.email{
+   position: absolute;
+   top:23em;
+   left:23em;
+   text-align: center;
+   font-family: 'HKGroteskBold';
+}
+
+.header{
+   font-family: 'HKGroteskBold';
+   font-size: 60px;
+}
+
+.contactA{
+   margin-top: 2em;
+   text-align: center;
+}
+
+.contactB{
+   margin-top: 16em;
+   text-align: center;
+}
+
+.contactImages img{
+   top:12em;
+   left: 10.4em;
+   position: absolute;
+   height: 10em;
+}
+
 .code{
    position: absolute;
    width: 100%;
@@ -99,6 +145,14 @@ ul {
    position: absolute;
    left: 4em;
    top: 9.5em;
+   height:12em;
+   z-index: 2;
+}
+
+.yellowCircleContact img {
+   position: absolute;
+   left: 24.5em;
+   top: 7.0em;
    height:12em;
    z-index: 2;
 }
