@@ -158,6 +158,8 @@ ul {
 .background img {
    height: 100%;
    position: absolute;
+   right:0em;
+   top:0em;
    z-index: 1;
 }
 
@@ -175,8 +177,8 @@ ul {
    position: absolute;
    top: 31.1em;
    height: 9em;
-   width: 100%;
    z-index: 3;
+   left:0em;
 }
 
 .verticalBarRight img {
@@ -302,8 +304,9 @@ p {
 }
 
 .remark-slide {
-  border-bottom: #FFCD33 3.7em solid;
-  z-index: 3;
+  border-bottom-color: #FFCD33; 
+  border-bottom-width: 3.7em;
+  border-bottom-style: solid;
 }
 
 
