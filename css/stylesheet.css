@@ -74,9 +74,9 @@ ul {
 
 .quote {
   background: #f9f9f9;
-  border-left: 10px solid #FFCD33;
+  border-left: 15px solid #FFCD33;
   width: 80%;
-  margin: 1.5em 4.5em;
+  margin: 1.5em 5.1em;
   line-height: 2.5em;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
@@ -268,7 +268,7 @@ body {
    z-index: 2;
 }
 
-.codingTitle{
+.titleSlide{
    margin-left: 1.85em;
    display: block;
    font-size: 55px;
