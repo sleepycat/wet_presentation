@@ -57,11 +57,6 @@ ul {
    padding-left: 1.5em;
 }
 
-.partner{
-   margin-top: 4em;
-   text-align: center;
-}
-
 .CenteredCode{
    position: absolute;
    width: 100%;
@@ -78,14 +73,10 @@ ul {
 }
 
 .quote {
-  position: absolute;
-  text-align: center;
-  top:4.9em;
-  left: 4.7em;
   background: #f9f9f9;
-  border-left: 10px solid #ccc;
+  border-left: 10px solid #FFCD33;
   width: 80%;
-  margin: 1.5em 10px;
+  margin: 1.5em 4.5em;
   line-height: 2.5em;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
@@ -110,15 +101,6 @@ ul {
   color: #222;
 }
 
-.quote {
-  background: #f9f9f9;
-  border-left: 10px solid #ccc;
-  width: 80%;
-  margin: 1.5em 10px;
-  line-height: 2.5em;
-  padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
-}
 
 /* START OF IMAGES */
 
@@ -246,52 +228,64 @@ body {
 }
 
 .rightText{
+   display: block;
    position: absolute;
+   border-right: 13px solid #FFCD33;
+   padding-right: 0.7em;
    font-family: 'HKGroteskRegular';
    font-size: 55px;
    top: 4.0em;
-   right: 2.1em;
+   right: 1.5em;
    text-align: right;
    z-index: 2;
 }
 
 .rightTextOnly{
+   display: block;
+   border-right: 13px solid #FFCD33;
+   padding-right: 0.7em;
+   width:80%;
    position: absolute;
    font-family: 'HKGroteskRegular';
    font-size: 45px;
-   top: 4.7em;
-   right: 2.65em;
+   top: 4.5em;
+   right: 2.25em;
    text-align: right;
    z-index: 2;
    padding-left: 1.5em;
 }
 
 .leftText{
+   display: block;
+   border-left: 13px solid #FFCD33;
+   padding-left: 0.7em;
    position: absolute;
    font-family: 'HKGroteskRegular';
    font-size: 55px;
    top: 4.0em;
-   left: 2.2em;
+   left: 1.5em;
    text-align: left;
    z-index: 2;
 }
 
 .codingTitle{
-   position: absolute;
-   font-family: 'HKGroteskRegular';
+   margin-left: 1.85em;
+   display: block;
    font-size: 55px;
-   top: 4.6em;
-   left: 2.2em;
-   text-align: left;
-   z-index: 2;
+   border-left: 13px solid #FFCD33;
+   padding-left: 0.7em;
 }
 
 .leftTextOnly{
+   display: block;
+   border-left: 13px solid #FFCD33;
+   padding-left: 0.7em;
    position: absolute;
+   width:80%;
    font-family: 'HKGroteskRegular';
    font-size: 45px;
-   top: 4.7em;
-   left: 2.65em;
+   top: 4.5em;
+   left: 2.25em;
    text-align: left;
    z-index: 2;
    padding-right: 1.5em;
@@ -305,6 +299,11 @@ h1, h2, h3 {
 
 p {
    margin: 0px;
+}
+
+.remark-slide {
+  border-bottom: #FFCD33 3.7em solid;
+  z-index: 3;
 }
 
 
