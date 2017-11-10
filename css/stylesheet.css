@@ -224,6 +224,7 @@ body {
    position: absolute;
    font-family: 'HKGroteskRegular';
    font-size: 50px;
+   text-align: left;
    top: 5.25em;
    left: 10em;
    z-index: 2;
