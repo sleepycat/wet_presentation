@@ -57,7 +57,7 @@ ul {
    padding-left: 1.5em;
 }
 
-.CenteredCode{
+.centeredCode{
    position: absolute;
    width: 100%;
    z-index: 3;
@@ -181,34 +181,6 @@ ul {
    left:0em;
 }
 
-.verticalBarRight img {
-   position: absolute;
-   left: 56.3em;
-   top: 11.0em;
-   width: 0.65em;
-   height: 10.0em;
-   z-index: 3;
-}
-
-.verticalBarLeft img {
-   position: absolute;
-   left: 3.7em;
-   top: 11.0em;
-   width: 0.65em;
-   height: 10.0em;
-   z-index: 3;
-}
-
-.verticalBarLeftCode img {
-   position: absolute;
-   left: 3.7em;
-   top: 13.0em;
-   width: 0.65em;
-   height: 5.8em;
-   z-index: 3;
-}
-
-
 /* END OF IMAGES */
 
 
@@ -230,68 +202,50 @@ body {
    z-index: 2;
 }
 
-.rightText{
-   display: block;
-   position: absolute;
-   border-right: 13px solid #FFCD33;
-   padding-right: 0.7em;
-   font-family: 'HKGroteskRegular';
-   font-size: 55px;
-   top: 4.0em;
-   right: 1.5em;
-   text-align: right;
-   z-index: 2;
-}
 
-.rightTextOnly{
-   display: block;
-   border-right: 13px solid #FFCD33;
-   padding-right: 0.7em;
-   width:80%;
-   position: absolute;
-   font-family: 'HKGroteskRegular';
-   font-size: 45px;
-   top: 4.5em;
-   right: 2.25em;
-   text-align: right;
-   z-index: 2;
-   padding-left: 1.5em;
-}
-
-.leftText{
-   display: block;
-   border-left: 13px solid #FFCD33;
-   padding-left: 0.7em;
-   position: absolute;
-   font-family: 'HKGroteskRegular';
-   font-size: 55px;
-   top: 4.0em;
-   left: 1.5em;
-   text-align: left;
-   z-index: 2;
-}
-
-.titleSlide{
+.caption{
    margin-left: 1.85em;
    display: block;
    font-size: 55px;
+   width: 70%;
    border-left: 13px solid #FFCD33;
    padding-left: 0.7em;
 }
 
-.leftTextOnly{
+.captionRight{
+   margin-left: 6.4em;
    display: block;
+   font-size: 55px;
+   width:60%;
+   border-right: 13px solid #FFCD33;
+   padding-right: 0.7em;
+}
+
+.captionLargeR{
+   margin-left: 1.85em;
+   display: block;
+   font-size: 55px;
+   width:80%;
+   border-right: 13px solid #FFCD33;
+   padding-right: 0.7em;
+}
+
+.captionLargeL{
+   margin-left: 1.85em;
+   display: block;
+   font-size: 55px;
+   width:80%;
    border-left: 13px solid #FFCD33;
    padding-left: 0.7em;
-   position: absolute;
-   width:80%;
-   font-family: 'HKGroteskRegular';
-   font-size: 45px;
-   top: 4.5em;
-   left: 2.25em;
-   text-align: left;
-   z-index: 2;
-   padding-right: 1.5em;
+}
+
+.captionLeft{
+   margin-left: 1.4em;
+   display: block;
+   font-size: 55px;
+   width:60%;
+   border-left: 13px solid #FFCD33;
+   padding-left: 0.7em;
 }
 
 h1, h2, h3 {
