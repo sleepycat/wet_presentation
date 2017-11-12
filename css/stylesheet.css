@@ -215,7 +215,7 @@ body {
 .captionRight{
    margin-left: 6.4em;
    display: block;
-   font-size: 55px;
+   font-size: 50px;
    width:60%;
    border-right: 13px solid #FFCD33;
    padding-right: 0.7em;
@@ -224,7 +224,7 @@ body {
 .captionLargeR{
    margin-left: 1.85em;
    display: block;
-   font-size: 55px;
+   font-size: 50px;
    width:80%;
    border-right: 13px solid #FFCD33;
    padding-right: 0.7em;
