@@ -51,10 +51,7 @@ ul {
 }
 
 .code{
-   position: absolute;
-   width: 100%;
-   z-index: 3;
-   padding-left: 1.5em;
+  background-color: #f0f0f0;
 }
 
 .centeredCode{
@@ -156,14 +153,6 @@ ul {
    z-index: 2;
 }
 
-.background img {
-   height: 100%;
-   position: absolute;
-   right:0em;
-   top:0em;
-   z-index: 1;
-}
-
 .separator img {
    position: absolute;
    top: 13em;
@@ -261,11 +250,7 @@ p {
 }
 
 .remark-slide {
-  border-bottom-color: #FFCD33; 
-  border-bottom-width: 3.7em;
-  border-bottom-style: solid;
 }
-
 
 .remark-slide-scaler {
    -webkit-box-shadow: none;
@@ -274,6 +259,12 @@ p {
 
 }
 
+.title-slide {
+  background-image: url(../images/BG_Test.png);
+  background-size: cover;
+}
+
+
 .remark-slide-number{
    position: absolute;
    padding-right: 0.2em;
@@ -281,7 +272,10 @@ p {
 }
 
 .remark-slide-content{
-	padding: 0em;
+  padding: 0em;
+  border-bottom-color: #ffcd33;
+  border-bottom-width: 3.7em;
+  border-bottom-style: solid;
 }
 
 .remark-container {
@@ -289,7 +283,16 @@ p {
 }
       
 .remark-code, .remark-inline-code { 
-   font-family: 'HKGroteskRegular';
+  font-family: 'HKGroteskRegular';
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  padding-left: 1.5em;
+  overflow: hidden;
+}
+
+.code pre {
+  margin: 0; 
 }
 
 .ten img {
