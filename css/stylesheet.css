@@ -186,7 +186,7 @@ body {
    font-size: 50px;
    text-align: left;
    top: 5.25em;
-   left: 10em;
+   left: 9.9em;
    z-index: 2;
 }
 
@@ -198,18 +198,28 @@ h1 {
    z-index: 2;
    border-left: 13px solid #FFCD33;
    padding-left: 0.75em;
-   padding-bottom: 0px;
-   margin-bottom: 0px;
 }
 
 h2 {
    font-family: 'HKGroteskRegular';
    font-weight:normal;
    display: block;
-   margin-left: 1.85em;
+   margin-left: 2.25em;
    z-index: 2;
+   width: 80%;
    border-left: 13px solid #FFCD33;
-   padding-left: 0.75em;
+   padding-left: 1.0em;
+}
+
+h3 {
+   font-family: 'HKGroteskRegular';
+   font-weight:normal;
+   display: block;
+   margin-left: 2.9em;
+   z-index: 2;
+   width: 75%;
+   border-left: 13px solid #FFCD33;
+   padding-left: 1.4em;
 }
 
 p {
