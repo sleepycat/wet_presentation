@@ -2,6 +2,17 @@
 
 ul {
   list-style-type: none;
+
+}
+
+ul li{
+  display: block;
+  font-size: 35px;
+  border-left: 15px solid #FFCD33;
+  padding-left: 1.25em;
+  margin-left: 1.75em;
+  padding-top: 0px;
+  margin-top: 0px;
 }
 
 .insta{
@@ -145,14 +156,6 @@ ul {
    z-index: 2;
 }
 
-.iconRight img {
-   position: absolute;
-   left: 6.75em;
-   top: 11.0em;
-   height:8.5em;
-   z-index: 2;
-}
-
 .separator img {
    position: absolute;
    top: 13em;
@@ -173,11 +176,6 @@ ul {
 
 /* END OF IMAGES */
 
-
-.bold{
-   font-family: 'HKGroteskBold';
-}
-
 body {
    font-family: 'HKGroteskRegular';
 }
@@ -192,61 +190,34 @@ body {
    z-index: 2;
 }
 
-
-.caption{
-   margin-left: 1.85em;
-   display: block;
-   font-size: 55px;
-   width: 70%;
-   border-left: 13px solid #FFCD33;
-   padding-left: 0.7em;
-   margin-bottom: 30px;
-}
-
-.captionRight{
-   margin-left: 6.4em;
-   display: block;
-   font-size: 55px;
-   width:60%;
-   border-right: 13px solid #FFCD33;
-   padding-right: 0.7em;
-}
-
-.captionLargeR{
-   margin-left: 1.85em;
-   display: block;
-   font-size: 55px;
-   width:80%;
-   border-right: 13px solid #FFCD33;
-   padding-right: 0.7em;
-}
-
-.captionLargeL{
-   margin-left: 1.85em;
-   display: block;
-   font-size: 55px;
-   width:80%;
-   border-left: 13px solid #FFCD33;
-   padding-left: 0.7em;
-}
-
-.captionLeft{
-   margin-left: 1.4em;
-   display: block;
-   font-size: 55px;
-   width:60%;
-   border-left: 13px solid #FFCD33;
-   padding-left: 0.7em;
-}
-
-h1, h2, h3 {
-   font-family: 'HKGroteskBold';
+h1 {
+   font-family: 'HKGroteskRegular';
    font-weight: normal;
+   display: block;
+   margin-left: 1.85em;
    z-index: 2;
+   border-left: 13px solid #FFCD33;
+   padding-left: 0.75em;
+   padding-bottom: 0px;
+   margin-bottom: 0px;
+}
+
+h2 {
+   font-family: 'HKGroteskRegular';
+   font-weight:normal;
+   display: block;
+   margin-left: 1.85em;
+   z-index: 2;
+   border-left: 13px solid #FFCD33;
+   padding-left: 0.75em;
 }
 
 p {
    margin: 0px;
+}
+
+b {
+  font-family: 'HKGroteskBold';
 }
 
 .remark-slide {
