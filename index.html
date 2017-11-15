@@ -15,202 +15,164 @@ class: center, middle, title-slide
 
 .separator[![Yellow separator](images/Bar.png)]
 
-.title[ <b> CDS Pres. Template </b> <br> Title goes here]
-
----
-
-class:left, middle
-
-# <b> CDS Launch </b> <br> Tweet: Jul 18, 2017
-
----
-
-class: middle, center
-
-.seventy[![CDS Launch Post](images/cds_launch.png)]
-
----
-
-class: center, middle
-
-.quote[The Government of Canada has an opportunity—and a responsibility—to deliver world-class
-services to Canadians. <strong>This will require disruption as we make the switch, both technically
-and culturally, to agile digital delivery models.</strong> <strong>To accelerate these 
-efforts, I am excited to announce the launch of the Canadian Digital Service (CDS)</strong> to modernize the way the Government of Canada designs and delivers digital services. CDS will be a partner to departments in delivering measurably improved services. <strong>We are rethinking the service design and delivery process</strong> from the user’s perspective, and engaging users every step of the way. -- the Honourable Scott Brison]
-
-
----
-
-class: center, middle
-
-.quote[<strong>Iteration should be used to progressively eliminate uncertainty</strong> during 
-the development of interactive systems. Iteration implies that descriptions, specifications and prototypes are revised and refined when new information is obtained <strong>in order to minimize the risk</strong> of the system under development failing to meet user requirements. -- ISO 9241-210:2010]
-
-
----
-
-class:left, middle
-
-# <b> Section Heading Slide </b> <br> Title of the section to follow
-
-
----
-
-class:left, middle
-
-# <b> To accelerate these efforts...<br> CDS partners to:</b>
-
-* <b> Deliver solutions: </b> design, prototype, build 
-* <b> Build Capacity: </b> recruitment, learning
-* <b> Provide advice: </b> support CIOB and others
-
----
-
-class: left, middle
-
-# <b> Common misconceptions... <br> CDS does NOT: </b>
-
-* <b> Operate services </b> (NOT a business owner)
-* <b> More stuff </b> (even more stuff) 
-* <b> Yet More Stuff </b> (wow this is alot of stuff)
-
----
-class:left, middle
-
-# <b> Section main heading </b> <br> Section sub heading goes here
-
-.quote[<b>Iteration should be used to progressively eliminate uncertainty</b> during 
-the development of interactive systems. Iteration implies that descriptions, specifications and prototypes are revised and refined when new information is obtained <b>in order to minimize the risk</b> of the system under development failing to meet user requirements. -- ISO 9241-210:2010]
-
-
----
-
-class:left, middle
-
-.yellowCircleLeft[![Yellow Circle](images/circle.png)]
-
-.iconLeft[![Left Icon](images/leftIcon.svg)]
-
-# <b>This is an example of a slide <br> with a supporting icon. Try <br> to keep it to 3 lines.</b>
-
-
----
-
-class: left, middle
-
-# <b> H1 Header + text </b> <br> 
-
-### This is an example of a text only slide. Although some people might require more space, it is encouraged to keep it brief and use 3 line slide template. Keep the text bold  with the < b > tag, line break when necessary < br > and try to stay between 5 or 6 lines.
-
----
-
-class:left, middle
-
-# <b> Coding Example </b> <br> Infrastructure as Code: Terraform
-
----
-
-class: code
-
-.centeredCode[
-
-```sh
-export AWS_REGION=eu-west-1
-moby build -output raw examples/aws.yml
-linuxkit push aws -bucket bucketname aws.raw
-```
+.title[
+  .bold[How we're building]
+  .subtitle[...and what we're hoping for in WET|next]
 ]
 
+---
+
+class: left, middle
+
+# A little about .react[![](images/react_logo.svg)]
 
 ---
 
-class: code
+<iframe width="100%" height="100%" src="https://facebook.github.io/jsx/" frameborder="0" allowfullscreen></iframe>
 
+---
+
+<iframe width="100%" height="100%" src="https://babeljs.io/repl/#?babili=false&browsers=&build=&builtIns=false&code_lz=DwBwfAwgIgygBIE3IDkBnOAlApgQwMYBdgB6cIA&debug=false&circleciRepo=&evaluate=false&lineWrap=true&presets=react&targets=&version=6.26.0" frameborder="0" style="" allowfullscreen></iframe>
+
+---
+class: code, top, left
+
+```javascript
+> var state = "CDS ❤'s React"
+undefined
+> var F = (variable) => renderToString(React.createElement("p", null, variable))
+undefined
+> ui = F(state)
+'<p data-reactroot="">CDS ❤\'s React</p>'
+```
+
+---
+class: middle, left
+
+## DOM diffing
 ```sh
-resource "aws_security_group" "elb" {
-  name        = "terraform_example_elb"
-  description = "Used in the terraform"
-  vpc_id      = "${aws_vpc.default.id}"
-
-  # HTTP access from anywhere
-  ingress {
-    from_port   = 80
-    to_port     = 80
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  # outbound internet access
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-}
+$ diff -u b.html a.html 
+--- b.html      2017-11-14 14:48:22.472886625 -0500
++++ a.html      2017-11-14 14:48:33.616466427 -0500
+@@ -1 +1 @@
+-<p data-reactroot=""></p>
++<p data-reactroot="">CDS ❤\'s React</p>
 ```
 
 ---
 
-class: code
+class: middle, left
 
-```sh
-resource "aws_instance" "web" {
-  connection {
-    # The default username for our AMI
-    user = "ubuntu"
-    # The connection will use the local SSH agent for authentication.
-  }
-  instance_type = "m1.small"
-  ami = "${lookup(var.aws_amis, var.aws_region)}"
-
-  # The name of our SSH keypair we created above.
-  key_name = "${aws_key_pair.auth.id}"
-
-  # Our Security group to allow HTTP and SSH access
-  vpc_security_group_ids = ["${aws_security_group.default.id}"]
-
-  # We're going to launch into the same subnet as our ELB. In a production
-  # environment it's more common to have a separate private subnet for
-  # backend instances.
-  subnet_id = "${aws_subnet.default.id}"
-
-  # We run a remote provisioner on the instance after creating it.
-  provisioner "remote-exec" {
-    inline = [
-      "sudo apt-get -y update",
-      "sudo apt-get -y install nginx",
-      "sudo service nginx start",
-    ]
-  }
-
-```
-
+# Why CDS is interested in .react[![](images/react_logo.svg)]
 
 ---
 
-class: code
+class: middle, left
 
-```sh
-[mike@longshot two-tier]$ terraform apply
-aws_key_pair.auth: Creation complete (ID: default)
-aws_vpc.default: Creation complete (ID: vpc-db05a9bd)
-aws_internet_gateway.default: Creation complete (ID: igw-bc6dffdb)
-aws_subnet.default: Creation complete (ID: subnet-9076e3cb)
-aws_route.internet_access: Creation complete (ID: r-rtb-30f0c8561080289494)
-aws_security_group.default: Creation complete (ID: sg-2e610954)
-aws_security_group.elb: Creation complete (ID: sg-44660e3e)
-aws_instance.web: Creation complete (ID: i-00a6cb09321849fa3)
-aws_elb.web: Creation complete (ID: terraform-example-elb)
+# CDS isn't building websites .subtitle[we're building web applications]
 
-Apply complete! Resources: 9 added, 0 changed, 0 destroyed.
-
-Outputs:
-
-address = terraform-example-elb-839046221.us-west-2.elb.amazonaws.com
-```
+.center.fourty[![](./images/frontend_dev.png)]
 
 ---
+class: top, center
+
+### It turns out our separation of concerns was just a separation of technologies.
+
+.sixty[![separation](images/separation_of_concerns.png)]
+
+---
+
+
+class: center, middle
+
+## Components
+
+.quote[
+  Component-based software engineering (CBSE) is
+  an approach to software development that relies on software
+  reuse. It emerged from the failure of object-oriented
+  development to support effective reuse.
+]
+
+.citation[Kaur, Arvinder, and Kulvinder Singh Mann. "Component based software engineering." International Journal of Computer Applications 2.1 (2010): 105-108.]
+---
+
+class: center, middle
+
+## Components
+
+.quote[
+  The main advantages of the Component-Based Development (CBD) approach include effective management of complexity, increased productivity, a greater degree of consistency, and a wider range of usability and extendibility, reduced time to market.
+]
+
+.citation[Kaur, Arvinder, and Kulvinder Singh Mann. "Component based software engineering." International Journal of Computer Applications 2.1 (2010): 105-108.]
+
+---
+class: center, middle
+
+## Composition
+
+![](images/cowsay.png)
+
+---
+class: left, middle
+
+# React: .subtitle[building applications via component composition]
+
+
+---
+class: code, left
+
+# Convert components to UI wherever .subtitle[tests, server, client]
+
+
+```javascript
+// render the UI on the server!
+const { html, ids, css } = extractCritical(ReactDOM.renderToString(app))
+
+// render the UI in my tests!
+  it('has a default background color', () => {
+    let button = shallow(<Button>submit</Button>).dive()
+    expect(stringify(sheet)).toMatch(/background-color:#eaebed/)
+  })
+```
+---
+
+
+
+class: left, middle
+
+# Implications of .react[![](images/react_logo.svg)] for WET
+
+---
+class: left, middle
+
+## WET clashes with the component model
+
+* DOM is managed by React. Don't touch!
+* Styles belong in/to components
+* Components come and go: global styles hang around
+* We want devs thinking in components not attaching classes to divs 
+* "include what you use" vs "include everything use some"
+
+---
+
+class: left, middle
+# WET|Next?
+
+---
+
+class: left, middle
+# Some thoughts
+
+* Design & accessibility, GoC law/policy, implementation and the contraints of the day (IE8!) are tangled together in WET
+* Design & accessibility requirements need to be met regardless of the technology du jour
+* Building GoC UI shouldn't require me to read WET source and guess
+* Design systems are how others are tackling this
+* Bringing in new tech needs to be easier
+
+---
+
 
 .contactA[ 
 .header[Questions?]
@@ -224,11 +186,6 @@ address = terraform-example-elb-839046221.us-west-2.elb.amazonaws.com
 .twitter[@dexterchief] 
 .email[mike.williamson@tbs-sct.gc.ca]
 ]
-
-
-
-
-
 
     </textarea>
     <script src="js/remark-latest.min.js"></script>

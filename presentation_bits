@@ -1,0 +1,202 @@
+[mike@longshot react_presentation]$ cat index.html 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> CDS - Presentation Title </title>
+    <meta charset="utf-8">
+    <link rel= "stylesheet" href= "css/stylesheet.css" />
+   
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle, title-slide
+
+.logo[![CDS logo](images/cds_logo.png)]
+
+.separator[![Yellow separator](images/Bar.png)]
+
+.title[
+  .bold[How we're building]
+  .subtitle[...and what we're hoping for in WET@next]
+]
+
+
+---
+
+.leftText[
+  CDS isn't building websites
+  .br.bold[we're building web applications]
+]
+
+---
+
+
+class: center, middle
+
+*  building applications via component composition
+*  things that effect our components should be explicitly passed
+*  DOM is managed for efficient updates
+
+---
+class:left, middle
+
+.titleSlide[.bold[Building applications via component composition
+]]
+
+.quote[
+    Component-based software engineering (CBSE) is
+    an approach to software development that relies on software
+    reuse. It emerged from the failure of object-oriented
+    development to support effective reuse.
+]
+
+Kaur, Arvinder, and Kulvinder Singh Mann. "Component selection for component based software engineering." International Journal of Computer Applications 2.1 (2010): 109-114.
+
+---
+.leftText[
+## Building applications via component composition
+  
+  .quote[
+    Component-based software engineering (CBSE) is
+    an approach to software development that relies on software
+    reuse. It emerged from the failure of object-oriented
+    development to support effective reuse.
+
+  ]
+]
+
+Kaur, Arvinder, and Kulvinder Singh Mann. "Component selection for component based software engineering." International Journal of Computer Applications 2.1 (2010): 109-114.
+---
+
+.leftText[
+## Building applications via component composition
+  
+  .quote[
+    The main advantages of the CBD approach include
+    effective management of complexity, increased productivity, a
+    greater degree of consistency, and a wider range of usability and
+    extendibility, reduced time to market.
+  ]
+]
+
+Kaur, Arvinder, and Kulvinder Singh Mann. "Component selection for component based software engineering." International Journal of Computer Applications 2.1 (2010): 109-114.
+---
+
+class:left, middle
+
+
+.titleSlide[
+  .bold[Why React?]
+  .subtitle[When you see how it works you will know why]
+]
+
+---
+```sh
+[mike@longshot play]$ grep -rin important wet/theme.css
+233:    background: transparent !important;
+234:    color: #000 !important;
+235:    -webkit-box-shadow: none !important;
+236:            box-shadow: none !important;
+237:    text-shadow: none !important; }
+258:    max-width: 100% !important; }
+268:    background: #fff !important; }
+273:    border-top-color: #000 !important; }
+277:    border-collapse: collapse !important; }
+280:      background-color: #fff !important; }
+283:    border: 1px solid #ddd !important; } }
+3402:        display: block !important;
+3403:        visibility: visible !important;
+3404:        height: auto !important;
+3406:        overflow: visible !important; }
+3632:    float: left !important; }
+
+```
+---
+React.createElement("p", null, "CDS \u2764's React");
+
+class:left, middle
+
+.titleSlide[
+  .bold[![](images/react_logo.svg)]
+  How it works
+]
+
+---
+
+class:left, middle
+
+# The process:
+
+* JSX > React.createElement
+* React.createElement > HTML string
+* HTML String > DOM
+
+---
+
+
+<iframe width="100%" height="100%" src="https://babeljs.io/repl/#?babili=false&browsers=&build=&builtIns=false&code_lz=GYVwdgxgLglg9mABACwKYBt1wBQEpEDeAUIogE6pQhlIA8AJjAG4B8AEhlogO5xnr0AhLQD0jVgG4iAXyA&debug=false&circleciRepo=&evaluate=false&lineWrap=true&presets=react&targets=&version=6.26.0" frameborder="0" allowfullscreen></iframe>
+
+---
+<iframe width="100%" height="100%" src="https://facebook.github.io/jsx/" frameborder="0" allowfullscreen></iframe>
+
+---
+
+
+class:left, middle
+
+```javascript
+[mike@longshot web]$ node
+> const React = require('react')
+> const ReactDOM = require('react-dom/server')
+> var foo = 'bar' // State!
+// State goes in UI comes out
+> ui = React.createElement('p', null, foo) 
+{ '$$typeof': Symbol(react.element),
+type: 'p',
+key: null,
+ref: null,
+props: { children: 'bar' },
+_owner: null,
+_store: {} }
+> ReactDOM.renderToString(ui)
+'<p data-reactroot="">bar</p>'
+
+```
+
+---
+
+class:center, middle
+
+# UI = F(State)
+
+
+---
+
+.contactA[ 
+.header[Questions?]
+]
+
+.contactImages[![Contact Images](images/contact.png)]
+
+
+.contactB[
+.insta[@sleepycat]
+.twitter[@dexterchief] 
+.email[mike.williamson@tbs-sct.gc.ca]
+]
+
+.horizontalBar[![Footer](images/HorizontalBar.png)]
+
+
+
+
+
+    </textarea>
+    <script src="js/remark-latest.min.js"></script>
+    <script>
+      var slideshow = remark.create({ratio: "16:9"});
+    </script>
+  </body>
+</html>
+

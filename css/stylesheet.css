@@ -2,93 +2,97 @@
 
 ul {
   list-style-type: none;
-
 }
 
-ul li{
+ul li {
   display: block;
-  font-size: 35px;
-  border-left: 15px solid #FFCD33;
+  font-size: 25px;
+  border-left: 15px solid #ffcd33;
+  padding-top: 10px;
   padding-left: 1.25em;
-  margin-left: 1.75em;
-  padding-top: 0px;
+  margin-left: 2.39em;
   margin-top: 0px;
 }
 
-.insta{
-   position: absolute;
-   top:23em;
-   left: 12.8em;
-   text-align: center;
-   font-family: 'HKGroteskBold';
+.subtitle {
+  font-size: 23px;
+  display: block;
 }
 
-.twitter{
-   position: absolute;
-   top:23em;
-   left: 41em;
-   text-align: center;
-   font-family: 'HKGroteskBold';
+.insta {
+  position: absolute;
+  top: 23em;
+  left: 12.8em;
+  text-align: center;
+  font-family: 'HKGroteskBold';
 }
 
-.email{
-   position: absolute;
-   top:23em;
-   left:23em;
-   text-align: center;
-   font-family: 'HKGroteskBold';
+.twitter {
+  position: absolute;
+  top: 23em;
+  left: 41em;
+  text-align: center;
+  font-family: 'HKGroteskBold';
 }
 
-.header{
-   font-family: 'HKGroteskBold';
-   font-size: 60px;
+.email {
+  position: absolute;
+  top: 23em;
+  left: 23em;
+  text-align: center;
+  font-family: 'HKGroteskBold';
 }
 
-.contactA{
-   margin-top: 2em;
-   text-align: center;
+.header {
+  font-family: 'HKGroteskBold';
+  font-size: 60px;
 }
 
-.contactB{
-   margin-top: 16em;
-   text-align: center;
+.contactA {
+  margin-top: 2em;
+  text-align: center;
 }
 
-.contactImages img{
-   top:12em;
-   left: 10.4em;
-   position: absolute;
-   height: 10em;
+.contactB {
+  margin-top: 16em;
+  text-align: center;
 }
 
-.code{
+.contactImages img {
+  top: 12em;
+  left: 10.4em;
+  position: absolute;
+  height: 10em;
+}
+
+.code {
   background-color: #f0f0f0;
 }
 
-.centeredCode{
-   position: absolute;
-   width: 100%;
-   z-index: 3;
-   text-align: center;
-   top:10em;
+.centeredCode {
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  text-align: center;
+  top: 10em;
 }
 
-.twitterPost{
-   position:absolute;
-   width:5em;
-   top:5em;
-   left: 12em;
+.twitterPost {
+  position: absolute;
+  width: 5em;
+  top: 5em;
+  left: 12em;
 }
 
 .quote {
   background: #f9f9f9;
-  border-left: 15px solid #FFCD33;
+  border-left: 15px solid #ffcd33;
   width: 80%;
   margin: 1.5em 5.1em;
   display: block;
   line-height: 2.5em;
   padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
+  quotes: '\201C''\201D''\2018''\2019';
 }
 
 .quote:before {
@@ -102,128 +106,126 @@ ul li{
 
 .quote p {
   display: inline;
+  font-size: 1.2em;
 }
 
 .quote {
-  padding:1em;
+  padding: 1em;
   font-style: italic;
   color: #222;
 }
 
-
 /* START OF IMAGES */
 
-
 .logo img {
-   position: absolute;
-   width: 6em;
-   top: 13em;
-   left: 14.5em;
-   height: 6em;
-   z-index: 2;
+  position: absolute;
+  width: 6em;
+  top: 13em;
+  left: 14.5em;
+  height: 6em;
+  z-index: 2;
 }
 
-
 .yellowCircleLeft img {
-   position: absolute;
-   right: 4em;
-   top: 9.5em;
-   height:12em;
-   z-index: 2;
+  position: absolute;
+  right: 4em;
+  top: 9.5em;
+  height: 12em;
+  z-index: 2;
 }
 
 .yellowCircleRight img {
-   position: absolute;
-   left: 4em;
-   top: 9.5em;
-   height:12em;
-   z-index: 2;
+  position: absolute;
+  left: 4em;
+  top: 9.5em;
+  height: 12em;
+  z-index: 2;
 }
 
 .yellowCircleContact img {
-   position: absolute;
-   left: 24.5em;
-   top: 7.0em;
-   height:12em;
-   z-index: 2;
+  position: absolute;
+  left: 24.5em;
+  top: 7em;
+  height: 12em;
+  z-index: 2;
 }
 
 .iconLeft img {
-   position: absolute;
-   right: 6.75em;
-   top: 11.0em;
-   height:8.5em;
-   z-index: 2;
+  position: absolute;
+  right: 6.75em;
+  top: 11em;
+  height: 8.5em;
+  z-index: 2;
 }
 
 .separator img {
-   position: absolute;
-   top: 13em;
-   left: 22.5em;
-   width: 0.6em;
-   height: 6em;
-   z-index: 2;
+  position: absolute;
+  top: 13em;
+  left: 22.5em;
+  width: 0.6em;
+  height: 6em;
+  z-index: 2;
 }
 
-
 .horizontalBar img {
-   position: absolute;
-   top: 31.1em;
-   height: 9em;
-   z-index: 3;
-   left:0em;
+  position: absolute;
+  top: 31.1em;
+  height: 9em;
+  z-index: 3;
+  left: 0em;
 }
 
 /* END OF IMAGES */
 
 body {
-   font-family: 'HKGroteskRegular';
+  font-family: 'HKGroteskRegular';
 }
 
-.title{
-   position: absolute;
-   font-family: 'HKGroteskRegular';
-   font-size: 50px;
-   text-align: left;
-   top: 5.25em;
-   left: 9.9em;
-   z-index: 2;
+.title {
+  position: absolute;
+  font-family: 'HKGroteskRegular';
+  font-size: 50px;
+  text-align: left;
+  top: 5.25em;
+  left: 9.9em;
+  z-index: 2;
 }
 
 h1 {
-   font-family: 'HKGroteskRegular';
-   font-weight: normal;
-   display: block;
-   margin-left: 1.85em;
-   z-index: 2;
-   border-left: 13px solid #FFCD33;
-   padding-left: 0.75em;
+  font-family: 'HKGroteskRegular';
+  font-weight: normal;
+  display: block;
+  margin-left: 1.85em;
+  z-index: 2;
+  border-left: 13px solid #ffcd33;
+  padding-left: 0.75em;
 }
 
 h2 {
-   font-family: 'HKGroteskRegular';
-   font-weight:normal;
-   display: block;
-   margin-left: 2.25em;
-   z-index: 2;
-   width: 80%;
-   border-left: 13px solid #FFCD33;
-   padding-left: 1.0em;
+  text-align: left;
+  font-family: 'HKGroteskRegular';
+  font-weight: normal;
+  display: block;
+  margin-left: 2.25em;
+  z-index: 2;
+  width: 80%;
+  border-left: 13px solid #ffcd33;
+  padding-left: 1em;
 }
 
 h3 {
-   font-family: 'HKGroteskRegular';
-   font-weight:normal;
-   display: block;
-   margin-left: 2.9em;
-   z-index: 2;
-   width: 75%;
-   border-left: 13px solid #FFCD33;
-   padding-left: 1.4em;
+  font-family: 'HKGroteskRegular';
+  font-weight: normal;
+  display: block;
+  margin-left: 2.9em;
+  z-index: 2;
+  width: 75%;
+  border-left: 13px solid #ffcd33;
+  padding-left: 1.4em;
 }
 
 p {
-   margin: 0px;
+  margin: 0px;
 }
 
 b {
@@ -234,10 +236,9 @@ b {
 }
 
 .remark-slide-scaler {
-   -webkit-box-shadow: none;
-   -moz-box-shadow: none;
-   box-shadow: none;
-
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 
 .title-slide {
@@ -245,25 +246,29 @@ b {
   background-size: cover;
 }
 
-
-.remark-slide-number{
-   position: absolute;
-   padding-right: 0.2em;
-   z-index: 3;
+.remark-slide-number {
+  position: absolute;
+  padding-right: 0.2em;
+  z-index: 3;
 }
 
-.remark-slide-content{
+.citation {
+  font-size: 0.6em;
+}
+
+.remark-slide-content {
   padding: 0em;
   border-bottom-color: #ffcd33;
-  border-bottom-width: 3.0em;
+  border-bottom-width: 3em;
   border-bottom-style: solid;
 }
 
 .remark-container {
-   background-color: #e6e6e6;
+  background-color: #e6e6e6;
 }
-      
-.remark-code, .remark-inline-code { 
+
+.remark-code,
+.remark-inline-code {
   font-family: 'HKGroteskRegular';
   position: absolute;
   width: 100%;
@@ -272,8 +277,19 @@ b {
   overflow: hidden;
 }
 
+
+.javascript {
+  padding: 1em;
+  font-size: 1.5em;
+}
+
 .code pre {
-  margin: 0; 
+  margin: 0;
+}
+
+.react img {
+  width: 12%;
+  vertical-align: middle;
 }
 
 .ten img {
